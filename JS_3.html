@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<h3>JavaScript-3</h3>
+    <h4>Durga Varalakshmi Sobhitha P N<br> 21BCE1028</h4>
+	<title>Calculator</title>
+	<style>
+		body {
+			margin: 30px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		1st Number: <input type="text" id="firstNumber" /><br><br>
+		2nd Number: <input type="text" id="secondNumber" /><br><br>
+		<input type="button" onClick="performOperation('multiply')" Value="Multiply" />
+		<input type="button" onClick="performOperation('divide')" Value="Divide" />
+	</form>
+
+	<p>The Result is : <br>
+		<span id="result"></span>
+	</p>
+
+	<script>
+		function performOperation(operation) {
+			num1 = parseFloat(document.getElementById("firstNumber").value);
+			num2 = parseFloat(document.getElementById("secondNumber").value);
+			var result;
+
+			if (operation === 'multiply') {
+				result = num1 * num2;
+			} else if (operation === 'divide') {
+				if (num2 === 0) {
+					result = "Cannot divide by zero!";
+				} else {
+					result = num1 / num2;
+				}
+			}
+
+			document.getElementById("result").innerHTML = result;
+		}
+	</script>
+	<br><br>
+    <a href="index.html">Back to Index</a>
+</body>
+</html>

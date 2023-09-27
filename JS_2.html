@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <h3>JavaScript-2</h3>
+    <h4>Durga Varalakshmi Sobhitha P N<br> 21BCE1028</h4>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title> JavaScript-2 </title>
+    <style> p{ display: inline; } </style>
+  </head>
+  <body>
+    <p> String : </p>
+    <input type="text" name id="string" onchange="sort()" fdprocessedid="">
+    <br><br>
+    <p id="answer">Expected Output: </p>
+    <script>
+      function sort()
+    {
+      str = document.getElementById("string").value
+      res = str.split("").sort().join("")
+      document.getElementById("answer").innerHTML = `Expected Output: ${res}`
+    }
+    </script>
+    <br><br>
+    <a href="index.html">Back to Index</a>
+  </body>
+</html>

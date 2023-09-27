@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <h3>JavaScript-1</h3>
+    <h4>Durga Varalakshmi Sobhitha P N<br> 21BCE1028</h4>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <style> p{ display: inline; } </style>
+  </head>
+  <body>
+    <p> X : </p>
+    <input type="number" name id="num" onchange="reverse()" fdprocessedid="">
+    <br><br>
+    <p id="answer">Expected Output: </p>
+    <script>
+      function reverse()
+    {
+      num1 = document.getElementById("num").value
+      let temp1 = num1
+      let ans = 0
+      let rem = 0
+      while(temp1>0){
+        rem = temp1%10
+        ans = ans*10 + rem
+        temp1 = Math.floor(temp1/10)
+      }
+      document.getElementById("answer").innerHTML = `Expected Output: ${ans}`
+    }
+    </script>
+    <br><br>
+    <a href="index.html">Back to Index</a>
+  </body>
+</html>
